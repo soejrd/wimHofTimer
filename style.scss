@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f2f2f2;
+    header {
+        margin: 0 auto;
+        height: 15vh;
+        background-color: white;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .container {
+            text-align: left;
+            padding-left: 32px;
+            max-width: 960px;
+            width: 100%;
+            margin: 0 auto;
+            left: 0;
+            display: block;
+            h1 {
+                text-align: left;
+                font-family: 'Catamaran', sans-serif;
+                font-size: 32px; //font-family: 'Karla', sans-serif;
+                color: #333;
+                font-weight: 700;
+                line-height: 34px;
+                #linko {
+                    height: auto;
+                    width: 20px;
+                    text-decoration: none;
+                    color: lightgrey;
+                    transition-duration: 400ms;
+                }
+                #linko:hover {
+                    color: #333
+                }
+            }
+            h2 {
+                text-align: left;
+                font-family: 'Karla', sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 26px;
+                a {
+                    color: #333;
+                    transition-duration: 400ms;
+                }
+                a:hover {
+                    color: #97D5E0;
+                }
+            }
+        }
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 960px;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        min-height: 75vh;
+        #breathingCircle {
+            //position: fixed;
+            //top: 60%;
+            //left: 50%;
+            margin: 0 auto;
+            /* Negative half of height. */
+            //margin-left: -35vmin;
+            /* Negative half of width. */
+            width: 70vmin;
+            height: 70vmin;
+            background-color: #97D5E0;
+            border-radius: 100%;
+            transform-origin: center;
+        }
+        #breathCount {
+            align-self: center;
+            
+            position: fixed;
+            font-family: 'Karla', sans-serif;
+            color: white;
+            text-align: center;
+            font-size: 136px;
+            border: none;
+            background: transparent;
+            opacity: 0;
+            pointer-events: none;
+            line-height: normal;
+        }
+        #counter {
+            @extend #breathCount;
+            color: #97D5E0;
+            opacity: 0;
+        }
+        h3 {
+            @extend #breathCount;
+            opacity: 1;
+            font-size: 24px;
+            width: 50vmax;
+            line-height: normal;
+            bottom: 10vmax;
+            font-weight: 400;
+            color: #333;
+            opacity: 0;
+        }
+    }
+    #progressBar {
+        position: fixed;
+        width: 100%;
+        height: 8px;
+        background-color: #97D5E0;
+        bottom: 0;
+    }
+}
