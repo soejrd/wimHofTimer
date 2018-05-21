@@ -7,27 +7,31 @@ body {
     background-color: #f2f2f2;
     header {
         margin: 0 auto;
-        height: 15vh;
+        min-height: 15vh;
         background-color: white;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
         display: flex;
         flex-direction: column;
         justify-content: center;
         .container {
+            height: auto;
             text-align: left;
-            padding-left: 32px;
+            
             max-width: 960px;
             width: 100%;
             margin: 0 auto;
             left: 0;
             display: block;
             h1 {
+                padding: 32px;
+                padding-bottom: 8px;
                 text-align: left;
                 font-family: 'Catamaran', sans-serif;
                 font-size: 32px; //font-family: 'Karla', sans-serif;
                 color: #333;
                 font-weight: 700;
                 line-height: 34px;
+                
                 #linko {
                     height: auto;
                     width: 20px;
@@ -40,6 +44,9 @@ body {
                 }
             }
             h2 {
+                padding-left: 32px;
+                padding-right: 32px;
+                padding-bottom: 32px;
                 text-align: left;
                 font-family: 'Karla', sans-serif;
                 font-size: 18px;
@@ -85,17 +92,18 @@ body {
             font-family: 'Karla', sans-serif;
             color: white;
             text-align: center;
-            font-size: 136px;
+            font-size: 128px;
             border: none;
             background: transparent;
             opacity: 0;
             pointer-events: none;
-            line-height: normal;
+            line-height: 0;
         }
-        #counter {
+        div#counter {
             @extend #breathCount;
             color: #97D5E0;
             opacity: 0;
+            line-height: normal;
         }
         h3 {
             @extend #breathCount;
@@ -107,6 +115,22 @@ body {
             font-weight: 400;
             color: #333;
             opacity: 0;
+        }
+        h4 {
+                        align-self: center;
+            
+            position: fixed;
+            font-family: 'Karla', sans-serif;
+            color: #333;
+            text-align: center;
+            font-size: 24px;
+            border: none;
+            background: transparent;
+            opacity: 0;
+            font-weight: 400;
+            pointer-events: none;
+            line-height: 0;
+            
         }
     }
     #progressBar {
