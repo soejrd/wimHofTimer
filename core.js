@@ -1,5 +1,5 @@
 var i = 0;
-var factor = 0.2;
+var factor = 1;
 
 resetTimer();
 
