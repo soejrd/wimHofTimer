@@ -6,16 +6,12 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118398220-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
         gtag('config', 'UA-118398220-2');
-
     </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wim Hof breathing method</title>
@@ -42,6 +38,11 @@
         <div id="counter">
             <span id="minutes"></span>:<span id="seconds"></span>
         </div>
+        <form action="#" id="numberForm">
+            <input type="number" id="number" value="20">
+            <input type="submit" value="Set breath count" onclick="cookieBoi(this)">
+        </form>
+        
         <h3 id="holdBreath">When you're ready, take a deep breath and hold for 10 seconds..</h3>
         <h4 id="outBreath">Breath out all the air in your lungs..</h4>
     </main>

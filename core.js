@@ -1,10 +1,21 @@
 var i = 0;
 var factor = 1;
-var loop = 20;
+var loop = 2;
+var number;
+
+function cookieBoi(e) {
+    var number = e.parentElement.children[0].value;
+    document.cookie = number;
+}
 
 resetTimer();
 
 function resetTimer() {
+    if(document.cookie){
+        loop = number;
+    } else {
+        loop = 20;
+    }
     anime({
         targets: '#breathingCircle',
         scale: 0.75,
@@ -30,7 +41,7 @@ function resetTimer() {
             targets: '#progressBar',
             width: '100%',
             easing: 'linear',
-            duration: 3600 * (loop-1) * factor,
+            duration: 3600 * (loop - 1) * factor,
             delay: 3600 * factor
         });
     }, 1000 * factor)
@@ -132,5 +143,5 @@ function resetTimer() {
 }
 
 document.onclick = function () {
-    location.reload(); 
+    //location.reload(); 
 }
