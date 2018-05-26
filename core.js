@@ -5,14 +5,19 @@ var number;
 
 function cookieBoi(e) {
     var number = e.parentElement.children[0].value;
-    document.cookie = number;
+    localStorage.setItem("loopCount", number);
+    console.log(localStorage.loopCount);
+    setTimeout(function(){
+        location.reload();
+    }, 500)
 }
 
 resetTimer();
 
 function resetTimer() {
-    if(document.cookie){
-        loop = number;
+    if(localStorage.loopCount){
+        loop = localStorage.loopCount;
+        document.getElementById('number').value = localStorage.loopCount;
     } else {
         loop = 20;
     }
