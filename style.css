@@ -78,8 +78,8 @@ body {
       margin: 0 auto;
       /* Negative half of height. */
       /* Negative half of width. */
-      width: 50vmax;
-      height: 50vmax;
+      width: 70vmin;
+      height: 70vmin;
       background-color: #97D5E0;
       border-radius: 100%;
       transform-origin: center; }
