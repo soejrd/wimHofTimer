@@ -69,7 +69,7 @@ function resetTimer() {
 
 
         var basicTimeline = anime.timeline({
-            loop: loop
+            loop: loop+1
         });
         basicTimeline
             .add({
